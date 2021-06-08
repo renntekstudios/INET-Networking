@@ -36,7 +36,7 @@ static void Main(string[] _args)
 ### OR
 
 ```cs
-	r_NetworkCallback.r_NetworkCallback("event_name", (id, packet) =>
+	r_NetworkCallback.RegisterCallback("event_name", (id, packet) =>
 	{
 		//code
 	});
