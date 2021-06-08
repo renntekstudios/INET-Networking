@@ -15,8 +15,8 @@
 ```cs
 static void Main(string[] _args)
 {
-	r_NetworkServer.OnPlayerConnected += delegate {//code};
-	r_NetworkServer.OnPlayerDisconnected += delegate {//code};
+	r_NetworkServer.OnPlayerConnected += delegate { /*code*/ };
+	r_NetworkServer.OnPlayerDisconnected += delegate { /*code*/ };
 	r_NetworkServer.InitializeServer(PORT) //5555
 }
 ```
@@ -30,7 +30,7 @@ static void Main(string[] _args)
 ### OR
 
 ```cs
-	r_NetworkCallback.RegisterCallback("event_name", delegate { //code });
+	r_NetworkCallback.RegisterCallback("event_name", delegate { /*code*/ });
 ```
 
 ### OR
@@ -45,9 +45,9 @@ static void Main(string[] _args)
 ### Default callbacks that could help you in the late future
 
 ```cs
-	r_NetworkCallback.RegisterCallback("Log", delegate { //code });
-	r_NetworkCallback.RegisterCallback("Alert", delegate { //code });
-	r_NetworkCallback.RegisterCallback("Error", delegate { //code });
+	r_NetworkCallback.RegisterCallback("Log", delegate { /*code*/ });
+	r_NetworkCallback.RegisterCallback("Alert", delegate { /*code*/ });
+	r_NetworkCallback.RegisterCallback("Error", delegate { /*code*/ });
 ```
 
 ### CLIENT...
@@ -55,12 +55,12 @@ static void Main(string[] _args)
 ```cs
 	static void Main(string[] _args)
 	{
-		r_NetworkClient.OnLog += delegate{//log};
+		r_NetworkClient.OnLog += delegate{ /*log*/ };
 		r_NetworkClient.InitializeClient(SERVER_ADDRESS, SERVER_PORT, ON_CONNECT_CALLBACK, ON_DISCONNECT_CALLBACK);
 	}
 ```
 
 ### SENDING DATA
 ```cs
-	r_NetworkClient.Emit("packet/event_name", PACKET_DATA, RPCTARGET)//ALL, OTHERS, SERVER
+	r_NetworkClient.Emit("packet/event_name", PACKET_DATA, RPCTARGET) //ALL, OTHERS, SERVER
 ```
